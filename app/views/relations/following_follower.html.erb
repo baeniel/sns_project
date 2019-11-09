@@ -1,0 +1,9 @@
+<% if @followers? %>
+  <% followers.each do |follower| %>
+    <%= follower.email %>
+  <% end %>
+<% else %>
+  <% followings.each do |following| %>
+    <%= following.email %>
+  <% end %>
+<% end %>

@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <% if notice %>
+      <%= notice %>
+    <% end %>
     <%= yield %>
+    <%= any_login_here if defined?(AnyLogin) || Rails.env.development? %>
   </body>
+
 </html>

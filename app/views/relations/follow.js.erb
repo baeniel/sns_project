@@ -1,0 +1,1 @@
+$('#follow_<%= @user.id %>').html('<%= link_to current_user&.following?(@user) ? "언팔로우" : "팔로우", follow_relation_path(@user), class: "btn btn-success", id: "follow_#{@user.id}", remote: true unless current_user == @user %>')
